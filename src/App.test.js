@@ -15,6 +15,6 @@ test('renders recipe list', () => {
 
 test('renders first recipe', () => {
   render(<App />);
-  const listItemElement = screen.getByText(/Orange Chicken/i);
+  const listItemElement = screen.getByText(/Apple Or Peach Strudel/i);
   expect(listItemElement).toBeInTheDocument();
 })
