@@ -10,6 +10,7 @@ function App() {
           <h1>Search Results</h1>
           <ul data-testid="recipe-list">
             <li data-testid="recipe-list-item">Orange Chicken</li>
+            <li data-testid="recipe-list-item">Teriyaki Chicken</li>
           </ul>
         </div>
       </header>
