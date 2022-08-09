@@ -11,7 +11,7 @@ function App() {
           <h1>Search Results</h1>
           <ul data-testid="recipe-list">
             { data.map(recipe => 
-              <li key={recipe.id} data-testid="recipe-list-item">{recipe.title}</li>
+              <li key={recipe.id}>{recipe.title}</li>
             )}
           </ul>
         </div>
