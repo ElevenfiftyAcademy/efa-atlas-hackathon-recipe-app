@@ -16,7 +16,7 @@ function App() {
           <h1>Search Results</h1>
           <ul data-testid="recipe-list" className="list-group">
             { data.map(recipe => 
-              <li key={recipe.id} className="list-group-items">{recipe.title}</li>
+              <li key={recipe.id} className="list-group-item">{recipe.title}</li>
             )}
           </ul>
         </div>
