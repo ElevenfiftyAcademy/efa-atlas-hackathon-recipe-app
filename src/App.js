@@ -13,7 +13,7 @@ function App() {
             <img src={Watermelon} alt="watermelon" width="100rem" height="100rem" />
             <img src={Flavorite} className="App-logo" alt="logo" width="100rem" height="100rem"/>
           </div> 
-          <h1>Search Results</h1>
+          <h1>Recipes</h1>
           <ul data-testid="recipe-list" className="list-group">
             { data.map(recipe => 
               <li key={recipe.id} className="list-group-item">{recipe.title}</li>
