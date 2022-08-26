@@ -8,7 +8,7 @@ function App() {
   const [recipes, setRecipes] = useState([])
   useEffect(() => {
     setRecipes(data)
-  })
+  },[recipes])
   // https://api.spoonacular.com/recipes/complexSearch?apiKey=26073aef38ae4bb9a8e0a5f932d4c334&includeIngredients=garlic
   return (
     <div className="App">
