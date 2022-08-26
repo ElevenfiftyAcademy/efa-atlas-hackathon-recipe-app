@@ -2,8 +2,13 @@ import Flavorite from './Flavorite_logo.svg';
 import Watermelon from './watermelon1.svg';
 import './App.css';
 import data from './result.json';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [recipes, setRecipes] = useState([])
+  useEffect(() => {
+    setRecipes(data)
+  })
   // https://api.spoonacular.com/recipes/complexSearch?apiKey=26073aef38ae4bb9a8e0a5f932d4c334&includeIngredients=garlic
   return (
     <div className="App">
@@ -18,7 +23,7 @@ function App() {
               </div> 
               <h2>Recipes</h2>
               <ul data-testid="recipe-list" className="list-group">
-                { data.map(recipe => 
+                { recipes.map(recipe => 
                   <li key={recipe.id} className="list-group-item">{recipe.title}</li>
                 )}
               </ul>

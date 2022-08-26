@@ -13,8 +13,9 @@ test('renders recipe list', () => {
   expect(listElement).toBeInTheDocument();
 })
 
-test('renders first recipe', () => {
+test('renders first recipe', async () => {
   render(<App />);
-  const listItemElement = screen.getByText(/Apple Or Peach Strudel/i);
+  const listItemElement = await screen.getByText(/Apple Or Peach Strudel/i);
   expect(listItemElement).toBeInTheDocument();
 })
+
