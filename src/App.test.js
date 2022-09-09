@@ -19,3 +19,9 @@ test('renders first recipe', async () => {
   expect(listItemElement).toBeInTheDocument();
 })
 
+xtest("Find by ingredients", () => {
+  return fetch("https://api.spoonacular.com/recipes/findByIngredients")
+      .then(data => {
+          expect(data).toBe({});
+      });
+});
