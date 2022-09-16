@@ -1,13 +1,14 @@
 import Flavorite from './Flavorite_logo.svg';
 import Watermelon from './watermelon1.svg';
 import './App.css';
-import data from './result.json';
 import { useEffect, useState } from 'react';
+import recipeService from './recipeService';
 
 function App() {
   const [recipes, setRecipes] = useState([])
   useEffect(() => {
-    setRecipes(data)
+    recipeService.findByIngredients()
+      .then(data => setRecipes(data))
   },[recipes])
   // https://api.spoonacular.com/recipes/complexSearch?apiKey=26073aef38ae4bb9a8e0a5f932d4c334&includeIngredients=garlic
   return (
